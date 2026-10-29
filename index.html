@@ -168,6 +168,7 @@ document.getElementById("orderForm").addEventListener("submit",e=>{
  const lines=basket.map(p=>`- ${p.name} x${p.qty} (${money(p.price*p.qty)})`).join("\n");
  const total=basket.reduce((s,p)=>s+p.price*p.qty,0);
  const message=`Hi TzSourcedDat! I'd like to place an order request.\n\nName: ${name}\nPhone: ${phone}\n\nItems:\n${lines}\n\nBasket total: ${money(total)}\nDelivery: ${delivery}\nAddress: ${address||"Not provided"}\nExtra details: ${notes||"None"}\n\nPlease confirm availability, delivery costs and payment details.`;
- window.open("https://wa.me/447707832564?text="+encodeURIComponent(message),"_blank");
+ window.location.href =
+  "https://wa.me/447707832564?text=" + encodeURIComponent(message);
 });
 document.getElementById("year").textContent=new Date().getFullY

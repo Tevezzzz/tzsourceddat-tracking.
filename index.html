@@ -1,218 +1,180 @@
 # tzsourceddat-tracking.
-A tracking website for my reselling business TzSourcedDat 
+🔥 Welcome to TzSourcedDat 🔥
+
+Your trusted source for quality finds at great prices! 🛍️ We specialise in sourcing the latest trends, must-have items, and great deals to bring you quality products without breaking the bank. 💯
+
+📦 Quality finds. Competitive prices. Reliable service.
+
+💎 TzSourcedDat — We Source It, You Cop It! 💸
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TzSourcedDat | Track Order</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #080b0a;
-      color: white;
-      font-family: Arial, sans-serif;
-      padding: 24px 16px;
-    }
-    .container {
-      max-width: 440px;
-      margin: 40px auto;
-      padding: 26px 20px;
-      background: #111713;
-      border: 1px solid #263a2c;
-      border-radius: 18px;
-    }
-    .logo {
-      color: #39e879;
-      font-size: 27px;
-      font-weight: 900;
-      text-align: center;
-    }
-    .tagline {
-      color: #9ca99f;
-      font-size: 11px;
-      text-align: center;
-      letter-spacing: 3px;
-      margin: 8px 0 30px;
-    }
-    h1 { font-size: 25px; margin-bottom: 8px; }
-    p { color: #b9c4bc; line-height: 1.5; }
-    label { display: block; margin: 18px 0 7px; }
-    input {
-      width: 100%;
-      padding: 14px;
-      background: #202923;
-      border: 1px solid #35453a;
-      border-radius: 8px;
-      color: white;
-      font-size: 16px;
-    }
-    button {
-      width: 100%;
-      margin-top: 20px;
-      padding: 15px;
-      background: #39e879;
-      border: 0;
-      border-radius: 8px;
-      color: #061009;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    button:disabled { opacity: .6; }
-    #message { margin-top: 20px; overflow-wrap: anywhere; }
-    .result {
-      margin-top: 18px;
-      padding: 16px;
-      background: #202923;
-      border-radius: 10px;
-      line-height: 1.8;
-      overflow-wrap: anywhere;
-    }
-    .status { color: #39e879; font-weight: bold; }
-    a { color: #39e879; }
-    footer {
-      margin-top: 30px;
-      text-align: center;
-      color: #849087;
-      font-size: 12px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TzSourcedDat | The Source For Your Style</title>
+<meta name="description" content="Shop sneakers, clothing, tech and accessories at TzSourcedDat. Send your order directly through WhatsApp.">
+<style>
+:root{--bg:#090b0a;--panel:#141815;--lime:#c7ff42;--muted:#a5aca5;--line:#293029}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#f7f8f5;font-family:Arial,Helvetica,sans-serif}
+header{padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);gap:12px}
+.logo{font-weight:900;font-size:22px;letter-spacing:-1px}.logo span{color:var(--lime)}
+.basket{background:var(--lime);color:#10130b;border:0;border-radius:30px;padding:12px 16px;font-weight:bold;cursor:pointer}
+.hero{padding:65px 6% 50px;background:radial-gradient(ellipse at 85% 20%,#25321b 0,transparent 42%)}
+.tag{color:var(--lime);font-size:12px;font-weight:bold;letter-spacing:2px}
+h1{font-size:clamp(40px,8vw,76px);line-height:.98;letter-spacing:-3px;margin:18px 0}
+h1 span{color:var(--lime)}
+.hero p{color:var(--muted);max-width:490px;line-height:1.7}
+.notice{margin-top:24px;display:inline-block;border:1px solid #465235;border-radius:10px;padding:12px 15px;font-size:13px}
+main{padding:35px 6% 70px}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+h2{font-size:25px;margin:0 0 18px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 25px}
+.filters button{background:#171b17;border:1px solid var(--line);color:#fff;border-radius:30px;padding:10px 15px;cursor:pointer}
+.filters button.active{background:var(--lime);color:#10130b;border-color:var(--lime);font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.product{background:var(--panel);border:1px solid var(--line);border-radius:15px;overflow:hidden}
+.product img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#202520;display:block}
+.product-info{padding:14px}
+.category{font-size:10px;letter-spacing:1.3px;color:var(--lime);text-transform:uppercase}
+.product h3{font-size:16px;margin:9px 0}
+.product p{font-size:12px;color:var(--muted);line-height:1.5;min-height:30px}
+.price{font-size:18px;font-weight:800;margin:12px 0}
+.add{width:100%;padding:11px;background:var(--lime);color:#111;border:0;border-radius:8px;font-weight:bold;cursor:pointer}
+.order-area{margin-top:45px;background:var(--panel);border:1px solid var(--line);padding:22px;border-radius:16px}
+.order-area p{color:var(--muted);line-height:1.6}
+label{display:block;font-size:13px;margin:15px 0 7px}
+input,textarea,select{width:100%;padding:13px;border-radius:8px;border:1px solid var(--line);background:#0d100d;color:#fff;font:inherit}
+textarea{min-height:85px;resize:vertical}
+.checkout{width:100%;padding:15px;background:var(--lime);color:#10130b;border:0;border-radius:9px;font-weight:900;margin-top:18px;cursor:pointer}
+#basketList{padding-left:20px;color:#ddd;line-height:1.9}
+.total{font-weight:bold;font-size:19px}
+footer{padding:30px 6%;border-top:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.8}
+footer strong{color:var(--lime)}
+.empty{color:var(--muted);padding:10px 0}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:45px}}
+@media(max-width:420px){header{padding:16px 4%}.logo{font-size:18px}.hero,main{padding-left:4%;padding-right:4%}.product-info{padding:10px}.product h3{font-size:14px}}
+</style>
 </head>
 <body>
-  <main class="container">
-    <div class="logo">TzSourcedDat</div>
-    <div class="tagline">BUY · SELL · SOURCE</div>
+<header>
+  <div class="logo">TZ<span>SOURCED</span>DAT.</div>
+  <button class="basket" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Basket (<span id="count">0</span>)</button>
+</header>
 
-    <h1>Track your order</h1>
-    <p>Enter the order number and tracking code we gave you.</p>
+<section class="hero">
+  <div class="tag">WELCOME TO TZSOURCEDDAT</div>
+  <h1>YOUR STYLE.<br>YOUR SOURCE.<br><span>YOUR MOVE.</span></h1>
+  <p>Shop the latest looks and everyday essentials. Choose your items, send your order on WhatsApp and arrange payment directly with us.</p>
+  <div class="notice">UK orders · Personal service · Order through WhatsApp</div>
+</section>
 
-    <form id="trackingForm">
-      <label for="order">Order number</label>
-      <input id="order" required autocomplete="off"
-        placeholder="Enter order number">
+<main>
+  <div class="section-head"><h2>Shop the collection</h2></div>
+  <div class="filters" id="filters">
+    <button class="active" data-cat="All">All items</button>
+    <button data-cat="Sneakers">Sneakers</button>
+    <button data-cat="Clothing">Clothing</button>
+    <button data-cat="Tech">Tech</button>
+    <button data-cat="Accessories">Accessories</button>
+  </div>
+  <div class="grid" id="products"></div>
 
-      <label for="code">Tracking code</label>
-      <input id="code" required autocomplete="off"
-        placeholder="Enter tracking code">
-
-      <button id="trackButton" type="submit">Track order</button>
+  <section class="order-area" id="order">
+    <h2>Your basket & order</h2>
+    <div id="basketList" class="empty">Your basket is empty. Add an item above to get started.</div>
+    <p class="total">Basket total: <span id="total">£0.00</span></p>
+    <p>Payment is arranged directly with TzSourcedDat on WhatsApp. If a deposit is required, we'll confirm the amount and payment details with you before your order is finalised.</p>
+    <form id="orderForm">
+      <label for="customer">Your name *</label>
+      <input id="customer" required placeholder="Enter your name">
+      <label for="contact">Your phone number *</label>
+      <input id="contact" required type="tel" placeholder="Your contact number">
+      <label for="delivery">Delivery method *</label>
+      <select id="delivery" required>
+        <option value="">Choose an option</option>
+        <option>Delivery (confirm cost on WhatsApp)</option>
+        <option>Collection (arrange on WhatsApp)</option>
+      </select>
+      <label for="address">Delivery address (if needed)</label>
+      <textarea id="address" placeholder="Enter your address if requesting delivery"></textarea>
+      <label for="notes">Item details / sizes / colours</label>
+      <textarea id="notes" placeholder="Add sizes, colours or any questions"></textarea>
+      <button class="checkout" type="submit">SEND ORDER TO WHATSAPP ↗</button>
     </form>
+  </section>
+</main>
 
-    <div id="message" role="status" aria-live="polite"></div>
-    <footer>© TzSourcedDat · Order Tracking</footer>
-  </main>
+<footer>
+  <strong>TzSourcedDat</strong><br>
+  Your source for sneakers, clothing, tech and accessories.<br>
+  Orders are requests until availability, delivery and payment have been confirmed directly with us.<br>
+  © <span id="year"></span> TzSourcedDat
+</footer>
 
-  <script>
-    const SUPABASE_URL =
-      "https://jsebwhhgcorttueelvfo.supabase.co";
+<script>
+// EDIT THESE EXAMPLE PRODUCTS, PRICES AND IMAGE LINKS BEFORE LAUNCHING.
+const items = [
+ {id:1,name:"Everyday Sneakers",cat:"Sneakers",price:65,desc:"Add your sneaker details and sizes.",img:"https://placehold.co/600x600/202820/c7ff42?text=Sneakers"},
+ {id:2,name:"Streetwear Hoodie",cat:"Clothing",price:40,desc:"Add your hoodie colours and sizes.",img:"https://placehold.co/600x600/202820/c7ff42?text=Clothing"},
+ {id:3,name:"Wireless Earbuds",cat:"Tech",price:35,desc:"Add your tech product details.",img:"https://placehold.co/600x600/202820/c7ff42?text=Tech"},
+ {id:4,name:"Everyday Accessories",cat:"Accessories",price:15,desc:"Add your accessory details.",img:"https://placehold.co/600x600/202820/c7ff42?text=Accessories"}
+];
+const basket = [];
+let category = "All";
+const money = n => "£" + n.toFixed(2);
 
-    // Replace this placeholder with your Supabase publishable key.
-    const SUPABASE_KEY = "sb_publishable_BdLm9WR-DkVoSTVOQdPQ_Q_CbEuZmpM";
-
-    const form = document.getElementById("trackingForm");
-    const button = document.getElementById("trackButton");
-    const message = document.getElementById("message");
-
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
-
-      const orderNumber = document.getElementById("order").value.trim();
-      const trackingCode = document.getElementById("code").value.trim();
-
-      if (SUPABASE_KEY.includes("PASTE_YOUR")) {
-        message.textContent =
-          "Setup needed: add your Supabase publishable key to the code.";
-        return;
-      }
-
-      button.disabled = true;
-      button.textContent = "Checking order...";
-      message.textContent = "";
-
-      try {
-        const response = await fetch(
-          SUPABASE_URL + "/rest/v1/rpc/track_tzsourceddat_order",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "apikey": SUPABASE_KEY,
-              "Authorization": "Bearer " + SUPABASE_KEY
-            },
-            body: JSON.stringify({
-              p_order_number: orderNumber,
-              p_tracking_code: trackingCode
-            })
-          }
-        );
-
-        const data = await response.json();
-
-        if (!response.ok) {
-          throw new Error("Tracking service unavailable. Please try again.");
-        }
-
-        const result = Array.isArray(data) ? data[0] : data;
-
-        if (!result || result.error || result.found === false) {
-          message.textContent =
-            "Order not found. Check your order number and tracking code.";
-          return;
-        }
-
-        if (result.success === false || result.message) {
-          message.textContent =
-            result.message || "Order not found. Check your details.";
-          return;
-        }
-
-        const card = document.createElement("div");
-        card.className = "result";
-
-        function addLine(label, value, className) {
-          if (value === null || value === undefined || value === "") return;
-          const line = document.createElement("div");
-          const name = document.createElement("strong");
-          name.textContent = label + ": ";
-          const text = document.createElement("span");
-          text.textContent = String(value);
-          if (className) text.className = className;
-          line.append(name, text);
-          card.appendChild(line);
-        }
-
-        addLine("Order", result.order_number);
-        addLine("Item", result.item_name);
-        addLine("Status", result.status, "status");
-        addLine("Courier", result.courier);
-        addLine("Estimated delivery", result.estimated_delivery);
-
-        if (result.courier_tracking_url) {
-          const link = document.createElement("a");
-          link.href = result.courier_tracking_url;
-          link.target = "_blank";
-          link.rel = "noopener noreferrer";
-          link.textContent = "Track with courier";
-          card.appendChild(link);
-        }
-
-        if (!card.childNodes.length) {
-          message.textContent =
-            "The tracking response format needs checking.";
-          return;
-        }
-
-        message.replaceChildren(card);
-      } catch (error) {
-        message.textContent =
-          error.message || "Could not check the order. Please try again.";
-      } finally {
-        button.disabled = false;
-        button.textContent = "Track order";
-      }
-    });
-  </script>
-</body>
-</html>
+function renderProducts(){
+ const list = category==="All" ? items : items.filter(p=>p.cat===category);
+ document.getElementById("products").innerHTML = list.map(p=>`
+ <article class="product">
+ <img src="${p.img}" alt="${p.name}" loading="lazy">
+ <div class="product-info">
+ <div class="category">${p.cat}</div><h3>${p.name}</h3>
+ <p>${p.desc}</p><div class="price">${money(p.price)}</div>
+ <button class="add" onclick="addItem(${p.id})">ADD TO BASKET +</button>
+ </div></article>`).join("");
+}
+function addItem(id){
+ const p=items.find(x=>x.id===id);
+ const found=basket.find(x=>x.id===id);
+ if(found) found.qty++; else basket.push({...p,qty:1});
+ renderBasket();
+}
+function removeItem(id){
+ const i=basket.findIndex(x=>x.id===id);
+ if(i>-1){basket[i].qty--;if(basket[i].qty<=0)basket.splice(i,1);}
+ renderBasket();
+}
+function renderBasket(){
+ const count=basket.reduce((s,p)=>s+p.qty,0);
+ const total=basket.reduce((s,p)=>s+p.price*p.qty,0);
+ document.getElementById("count").textContent=count;
+ document.getElementById("total").textContent=money(total);
+ const list=document.getElementById("basketList");
+ if(!basket.length){list.className="empty";list.textContent="Your basket is empty. Add an item above to get started.";return;}
+ list.className="";
+ list.innerHTML=basket.map(p=>`<div>${p.name} × ${p.qty} — ${money(p.price*p.qty)} <button type="button" aria-label="Remove one ${p.name}" onclick="removeItem(${p.id})" style="background:none;color:#c7ff42;border:0;cursor:pointer">Remove one</button></div>`).join("");
+}
+document.getElementById("filters").addEventListener("click",e=>{
+ if(e.target.tagName!=="BUTTON")return;
+ category=e.target.dataset.cat;
+ document.querySelectorAll("#filters button").forEach(b=>b.classList.toggle("active",b===e.target));
+ renderProducts();
+});
+document.getElementById("orderForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ if(!basket.length){alert("Please add at least one item to your basket first.");return;}
+ const name=document.getElementById("customer").value.trim();
+ const phone=document.getElementById("contact").value.trim();
+ const delivery=document.getElementById("delivery").value;
+ const address=document.getElementById("address").value.trim();
+ const notes=document.getElementById("notes").value.trim();
+ const lines=basket.map(p=>`- ${p.name} x${p.qty} (${money(p.price*p.qty)})`).join("\n");
+ const total=basket.reduce((s,p)=>s+p.price*p.qty,0);
+ const message=`Hi TzSourcedDat! I'd like to place an order request.\n\nName: ${name}\nPhone: ${phone}\n\nItems:\n${lines}\n\nBasket total: ${money(total)}\nDelivery: ${delivery}\nAddress: ${address||"Not provided"}\nExtra details: ${notes||"None"}\n\nPlease confirm availability, delivery costs and payment details.`;
+ window.open("https://wa.me/447707832564?text="+encodeURIComponent(message),"_blank");
+});
+document.getElementById("year").textContent=new Date().getFullY

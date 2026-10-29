@@ -170,6 +170,5 @@ document.getElementById("orderForm").addEventListener("submit",e=>{
  const message=`Hi TzSourcedDat! I'd like to place an order request.\n\nName: ${name}\nPhone: ${phone}\n\nItems:\n${lines}\n\nBasket total: ${money(total)}\nDelivery: ${delivery}\nAddress: ${address||"Not provided"}\nExtra details: ${notes||"None"}\n\nPlease confirm availability, delivery costs and payment details.`;
  const whatsappUrl =
   "https://wa.me/447707832564?text=" +
-  encodeURIComponent(message);
-
+  encodeURIComponent(message);.                                                 
 window.location.assign(whatsappUrl);
